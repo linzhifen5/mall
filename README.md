@@ -1,21 +1,30 @@
-# mall
+# 第一天
 
-> vue商城
+项目准备
 
-## Build Setup
+全局安装vue-cli
+npm install --global vue-cli
 
-``` bash
-# install dependencies
+创建项目
+vue init webpack mall
+
+
+安装依赖包
+cd mall
 npm install
-
-# serve with hot reload at localhost:8080
 npm run dev
 
-# build for production with minification
-npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+目录结构：
+assets      静态文件目录
+components  公共组件
+base        基础组件
+pages       页面组件
+api         数据组件
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+
+
+
+
