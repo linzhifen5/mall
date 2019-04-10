@@ -56,6 +56,49 @@ scss 的引入
 
 
 
+# 第四天
+
+// 路由重定向
+    {
+      path:'*',
+      redirect:'/home'
+    },
+
+
+加载优化
+
+routes:[
+    {
+      name:'home',
+      path:'/home',
+      component:()=>import('pages/home'),
+      children:[
+        {
+          name:'home-product',
+          path:'product/:id',
+          component:()=>import('pages/product'),
+        }
+      ]
+    }
+]
+
+
+# 第五天
+
+路由的懒加载
+component:()=>import('pages/home')
+
+# 4月10日
+
+
+
+
+
+
+
+
+
+
 
 
 
