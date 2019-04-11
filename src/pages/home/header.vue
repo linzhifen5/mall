@@ -1,7 +1,7 @@
 <template>
-  <me-navbar class="header">
+  <me-navbar class="header" title="title">
     <i class="iconfont icon-scan" slot="left"></i>
-    <i slot="center">搜索框</i>
+    <!-- <i slot="center">搜索框</i> -->
     <i class="iconfont icon-msg" slot="right"></i>
   </me-navbar>
 </template>

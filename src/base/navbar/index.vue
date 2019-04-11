@@ -9,12 +9,21 @@
     <div class="mine-navbar-right" v-if="$slots.left">
       <slot name="right"></slot>
     </div>
+    <h1 class="mine-navbar-title" v-if="title">
+      <span class="mine-navbar-text" v-text="title"></span>
+    </h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Me"
+  name: "Me",
+  props: {
+    title: {
+      type: String,
+      default: ""
+    }
+  }
 };
 </script>
 
@@ -23,20 +32,50 @@ export default {
 
 .mine-navbar {
   @include flex-between();
+  position: relation;
   height: 50px;
   background-color: #fff;
 
   &-left {
     margin-left: 10px;
+
+    ~ .mine-navbar-right {
+      position: static;
+    }
   }
 
   &-center {
     flex: 1;
     margin: 0 10px;
+
+    ~ .mine-navbar-right {
+      position: static;
+    }
   }
 
   &-right {
+    position: absolute;
+    right: 0;
+    @include flex-center();
+    height: 100%;
     margin-right: 10px;
+  }
+
+  &-title {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20%;
+    right: 20%;
+    @include flex-center();
+    text-align: center;
+  }
+
+  &-text{
+      width: 100%;
+      line-height: 1.5;
+      font-size: 18px;
+      @include ellipsis();
   }
 }
 </style>
