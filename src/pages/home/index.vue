@@ -5,7 +5,11 @@
         <home-header></home-header>
     </header>
     <!-- 内容 -->
-    <div></div>
+    <div>
+        <home-slide>
+          
+        </home-slide>
+    </div>
     <!-- 回到首页 -->
     <div class="g-backtop-container"></div>
     <router-view></router-view>
@@ -14,11 +18,13 @@
 
 <script>
 import HomeHeader from "./header";
+import HomeSlide from "./slide";
 
 export default {
   name: "Home",
   components:{
-      HomeHeader
+      HomeHeader,
+      HomeSlide
   }
 };
 </script>

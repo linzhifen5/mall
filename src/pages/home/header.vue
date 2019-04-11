@@ -1,7 +1,7 @@
 <template>
-  <me-navbar class="header" title="title">
+  <me-navbar class="header" title="">
     <i class="iconfont icon-scan" slot="left"></i>
-    <!-- <i slot="center">搜索框</i> -->
+    <i slot="center">搜索框</i>
     <i class="iconfont icon-msg" slot="right"></i>
   </me-navbar>
 </template>
@@ -21,7 +21,8 @@ export default {
 
 .header {
   &.mine-navbar {
-    background-color: $header-bgc-translucent;
+    // background-color: $header-bgc-translucent;
+    background-color: rgba(222, 24, 27, 0.1);
   }
 
   .iconfont {
